@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lv" data-theme="dark" data-lang="lv">
+<html lang="en" data-theme="dark" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,7 +11,7 @@
     <link rel="icon" type="image/svg+xml" href="icon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Cookie&display=swap');
         *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 
         [data-theme="dark"]{
@@ -81,7 +81,7 @@
         [data-theme="light"] .theme-toggle .toggle-knob{transform:translateX(18px)}
         [data-theme="light"] .theme-toggle{background:rgba(0,0,0,0.06)}
 
-        .upload-section{background:var(--bg-card);backdrop-filter:blur(20px);border:3px solid;border-radius:16px;padding:40px 24px;margin:16px;text-align:center;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);cursor:pointer;position:relative;overflow:visible;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-image:linear-gradient(90deg,#6c5ce7,#a855f7,#ec4899,#a855f7,#6c5ce7) 1;animation:rotateBorder 4s linear infinite;background-size:400% 400%}
+        .upload-section{background:var(--bg-card);backdrop-filter:blur(20px);border:3px solid;border-radius:16px;padding:40px 24px;margin:16px 16px 50px 16px;text-align:center;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);cursor:pointer;position:relative;overflow:visible;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border-image:linear-gradient(90deg,#6c5ce7,#a855f7,#ec4899,#a855f7,#6c5ce7) 1;animation:rotateBorder 4s linear infinite;background-size:400% 400%}
         @keyframes rotateBorder{0%{border-image:linear-gradient(90deg,#6c5ce7,#a855f7,#ec4899,#a855f7,#6c5ce7) 1}25%{border-image:linear-gradient(180deg,#a855f7,#ec4899,#6c5ce7,#a855f7,#ec4899) 1}50%{border-image:linear-gradient(270deg,#ec4899,#6c5ce7,#a855f7,#ec4899,#6c5ce7) 1}75%{border-image:linear-gradient(0deg,#6c5ce7,#ec4899,#a855f7,#6c5ce7,#ec4899) 1}100%{border-image:linear-gradient(90deg,#6c5ce7,#a855f7,#ec4899,#a855f7,#6c5ce7) 1}}
         .upload-section:active{transform:scale(0.98)}
         .upload-section.active{display:none;pointer-events:none}
@@ -155,9 +155,10 @@
         @keyframes hintPulse{0%,100%{opacity:0.4}50%{opacity:1}}
 
         .app-footer{text-align:center;padding:4px 10px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;font-size:0.55rem;letter-spacing:0.08em;color:var(--text-muted);display:flex;align-items:center;justify-content:center;position:relative}
-        .bmc-link{position:absolute;left:10px;bottom:4px;text-decoration:none;color:var(--text-primary);font-size:0.6rem;font-weight:600;display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;border:2px solid var(--accent-1);background:var(--glass);transition:all 0.3s ease;backdrop-filter:blur(10px)}
-        .bmc-link:hover{background:var(--accent-1);color:white;box-shadow:0 0 15px var(--accent-glow);transform:translateY(-1px)}
-        .bmc-link i{font-size:0.65rem}
+        .bmc-link{position:absolute;left:20px;bottom:4px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;padding:7px 15px;background:#BD5FFF;color:#ffffff;font-family:'Cookie',cursive;font-size:16px;border-radius:8px;border:2px solid #000000;transition:all 0.3s ease;box-shadow:0 2px 8px rgba(189,95,255,0.3)}
+        .bmc-link:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(189,95,255,0.5);filter:brightness(1.1)}
+        .bmc-link i:first-child{color:#FFDD00;font-size:18px}
+        .bmc-link i:last-child{color:#ff69b4;font-size:14px}
         
         .info-btn{position:absolute;right:15px;top:20%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--glass);border:2px solid var(--accent-1);color:var(--accent-1);font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;touch-action:manipulation;box-shadow:0 0 10px var(--accent-glow)}
         .info-btn:hover{background:rgba(108,92,231,0.15);border-color:var(--accent-1)}
@@ -286,7 +287,7 @@
                 </ul>
             </div>
 
-            <div class="info-version">© DS 2025 v2.3</div>
+            <div class="info-version">© DS 2025 v2.5</div>
         </div>
     </div>
     
@@ -294,7 +295,7 @@
         <header>
             <div class="header-toggle lang-toggle" onclick="toggleLang()">
                 <span class="lang-label left">LV</span>
-                <div class="toggle-knob" id="langKnob">LV</div>
+                <div class="toggle-knob" id="langKnob">EN</div>
                 <span class="lang-label right">EN</span>
             </div>
             <div class="header-content">
@@ -364,9 +365,10 @@
         <footer class="app-footer">
             <a href="https://www.buymeacoffee.com/didthislv" target="_blank" rel="noopener" class="bmc-link">
                 <i class="fa-solid fa-mug-hot"></i>
-                <span data-lv="Atbalsti" data-en="Support">Atbalsti</span>
+                <span data-lv="Nopirkt kafiju" data-en="Buy me a coffee">Buy me a coffee</span>
+                <i class="fa-solid fa-heart"></i>
             </a>
-            <span>© DS 2025 v2.3</span>
+            <span>© DS 2025 v2.5</span>
             <button class="info-btn" onclick="openInfo()" title="Info"><i class="fa-solid fa-info"></i></button>
         </footer>
     </div>
@@ -381,7 +383,7 @@
         function closeInfo(){document.getElementById('infoModal').classList.remove('active');}
 
         function toggleLang(){const h=document.documentElement,kn=document.getElementById('langKnob'),nw=h.getAttribute('data-lang')==='lv'?'en':'lv';h.setAttribute('data-lang',nw);h.setAttribute('lang',nw);kn.textContent=nw.toUpperCase();localStorage.setItem('lang',nw);document.querySelectorAll('[data-lv][data-en]').forEach(el=>{el.textContent=el.id==='compareBtnText'&&isComparing?el.getAttribute('data-'+nw+'-alt')||el.getAttribute('data-'+nw):el.getAttribute('data-'+nw);});}
-        (function(){const s=localStorage.getItem('lang');if(s&&s!=='lv'){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langKnob').textContent=s.toUpperCase();document.querySelectorAll('[data-lv][data-en]').forEach(el=>el.textContent=el.getAttribute('data-'+s));}})();
+        (function(){const s=localStorage.getItem('lang')||'en';document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langKnob').textContent=s.toUpperCase();document.querySelectorAll('[data-lv][data-en]').forEach(el=>el.textContent=el.getAttribute('data-'+s));})();
         function toggleTheme(){const h=document.documentElement,i=document.getElementById('themeIcon');if(h.getAttribute('data-theme')==='dark'){h.setAttribute('data-theme','light');i.className='fa-solid fa-sun';localStorage.setItem('theme','light');}else{h.setAttribute('data-theme','dark');i.className='fa-solid fa-moon';localStorage.setItem('theme','dark');}}
         (function(){const s=localStorage.getItem('theme');if(s){document.documentElement.setAttribute('data-theme',s);document.getElementById('themeIcon').className=s==='light'?'fa-solid fa-sun':'fa-solid fa-moon';}})();
         function showToast(m,type='success'){const to=document.getElementById('toast');to.className='toast '+type;document.getElementById('toastIcon').className=type==='success'?'fa-solid fa-circle-check':'fa-solid fa-triangle-exclamation';document.getElementById('toastText').textContent=m;requestAnimationFrame(()=>to.classList.add('show'));setTimeout(()=>to.classList.remove('show'),3000);}
